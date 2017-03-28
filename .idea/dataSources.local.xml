@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - housedb@10.200.8.106" uuid="71b9d8a1-d923-474d-bc58-d4b849fc410d">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <introspection-scope>housedb:</introspection-scope>
+      <resolve-scope>housedb:</resolve-scope>
+    </data-source>
+  </component>
+</project>

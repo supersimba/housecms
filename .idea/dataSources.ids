@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - housedb@10.200.8.106" uuid="71b9d8a1-d923-474d-bc58-d4b849fc410d">
+    <database-info product="MySQL" version="5.7.17-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+      <schema id="1" name="housedb">
+        <visible>1</visible>
+      </schema>
+      <schema id="2" name="dbdemo"/>
+      <schema id="3" name="information_schema"/>
+      <schema id="4" name="monidb"/>
+      <schema id="5" name="mxonline"/>
+      <schema id="6" name="mysql"/>
+      <schema id="7" name="ormdb"/>
+      <schema id="8" name="performance_schema"/>
+      <schema id="9" name="sys"/>
+      <schema id="10" name="test"/>
+    </database-model>
+  </data-source>
+</component>
