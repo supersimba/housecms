@@ -1,0 +1,22 @@
+body{
+	font-family: "微软雅黑";
+	margin: 0px;
+	padding: 0px;
+}
+
+.navbar-default{
+	background-color: rgb(0,116,199);
+}
+
+.navbar {
+    border-radius: 0px;
+}
+
+.navbar-default .navbar-brand{
+    color:white;
+}
+
+/**/
+#ul-sider-menu{
+	
+}
