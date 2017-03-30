@@ -11,4 +11,5 @@ urlpatterns = [
     #
     url(r'^mgrindex',TemplateView.as_view(template_name='cmsapp/mgrindex.html')),
     url(r'^mgrhouse',TemplateView.as_view(template_name='cmsapp/mgrhouse.html')),
+    url(r'^addhouse',TemplateView.as_view(template_name='cmsapp/addhouse.html')),
 ]

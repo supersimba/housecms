@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="/static/js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="/static/css/mgrindex.css" />
+
+        <script>
+            function  generic_building_no_select() {
+                var o=document.getElementById("select-building-no-id");
+                var i=1;
+                for(;i<=30;i++){
+                    var opobj=document.createElement("option");
+                    opobj.setAttribute("value",i);
+                    opobj.appendChild(document.createTextNode(i+"栋/单元"));
+                    o.appendChild(opobj);
+                }
+            }
+            function  generic_floor_select() {
+                var o=document.getElementById("select-floor-no-id");
+                var i=1;
+                for(;i<=100;i++){
+                    var opobj=document.createElement("option");
+                    opobj.setAttribute("value",i);
+                    opobj.appendChild(document.createTextNode(i+"层"));
+                    o.appendChild(opobj);
+                }
+            }
+             function  generic_room_select() {
+                var o=document.getElementById("select-room-no-id");
+                var i=1;
+                for(;i<=30;i++){
+                    var opobj=document.createElement("option");
+                    opobj.setAttribute("value",i);
+                    opobj.appendChild(document.createTextNode(i+"号"));
+                    o.appendChild(opobj);
+                }
+            }
+            function  generic_area_select() {
+                var o=document.getElementById("select-area-id");
+                var arr=new Array("江北区","九龙坡区","渝中区","南岸区","巴南区","北部新区","大渡口区","北碚区","渝北区");
+                var i=0;
+                for(;i<=arr.length-1;i++){
+                    var opobj=document.createElement("option");
+                    opobj.setAttribute("value",i);
+                    opobj.appendChild(document.createTextNode(arr[i]));
+                    o.appendChild(opobj);
+                }
+            }
+            window.onload=function () {
+                generic_building_no_select();
+                generic_floor_select();
+                generic_room_select();
+                generic_area_select();
+            }
+        </script>
+	</head>
+
+	<body>
+		<!--header block-->
+		<nav class="navbar navbar-default">
+			<div class="navbar-brand">
+				房产LOGO
+			</div>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sider-menu">
+				<span class="sr-only">Toggle navigation</span>
+        		<span class="icon-bar"></span>
+        		<span class="icon-bar"></span>
+        		<span class="icon-bar"></span>
+			</button>
+
+			<div class="navbar-brand navbar-right login-text">
+				C罗，欢迎登陆
+			</div>
+
+		</nav>
+		<!--header block-->
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-2">
+					<!--左边菜单栏-->
+					<!--<div class="collapse" id="bs-example-navbar-collapse-1">1</div>-->
+					<ul class="nav nav-stacked collapse navbar-collapse" id="sider-menu">
+						<li role="presentation" class="active">
+							<a href="#">
+								<span class="glyphicon glyphicon-home" style="margin-right: 15px;"></span>管理首页</a>
+						</li>
+						<li role="presentation">
+							<a href="#"><span class="glyphicon glyphicon-th-list" style="margin-right: 15px;"></span>客户管理</a>
+						</li>
+						<li role="presentation">
+							<a href="#"><span class="glyphicon glyphicon-stats" style="margin-right: 15px;"></span>房源管理</a>
+						</li>
+						<li role="presentation">
+							<a href="#"><span class="glyphicon glyphicon-stats" style="margin-right: 15px;"></span>权限管理</a>
+						</li>
+						<li role="presentation">
+							<a href="#"><span class="glyphicon glyphicon-user" style="margin-right: 15px;">
+  							</span>员工管理</a>
+						</li>
+						<li role="presentation">
+							<a href="#"><span class="glyphicon glyphicon-minus" style="margin-right: 15px;">
+  							</span>退出登录</a>
+						</li>
+					</ul>
+					<!--左边菜单栏-->
+				</div>
+				<div class="col-md-10 div-content">
+					<!--路径导航-->
+					<div class="col-md-12">
+						<ol class="breadcrumb">
+							<li>
+								<a href="#">平台首页</a>
+							</li>
+							<li>
+								<a href="#">房源管理</a>
+							</li>
+							<li class="active">添加房源</li>
+						</ol>
+					</div>
+					<!--路径导航-->
+
+					<!--搜索栏-->
+					<div class="col-md-12">
+
+					</div>
+					<!--END搜索栏-->
+
+					<!--添加房源信息区域-->
+                    <div class="col-md-12" style="margin-top: 12px;">
+                        <table class="table table-bordered">
+                            <tr>
+                                <td style="width: 10%">
+                                    卖方人姓名
+                                </td>
+                                <td style="width: 23%">
+                                    <input type="text">
+                                </td>
+                                <td style="width: 10%">
+                                    卖方人手机
+                                </td>
+                                <td style="width: 23%">
+                                    <input type="text">
+                                </td>
+                                <td style="width: 10%">
+                                    卖方人座机
+                                </td>
+                                <td style="width: 24%">
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 10%">
+                                    楼盘名称
+                                </td>
+                                <td style="width: 23%">
+                                    <input type="text">
+                                </td>
+                                <td style="width: 10%">
+                                    楼盘楼层信息
+                                </td>
+                                <td style="width: 23%">
+                                    <select name="select-building-no-name" id="select-building-no-id">
+                                    </select>
+                                    <select name="select-floor-no-name" id="select-floor-no-id">
+                                    </select>
+                                    <select name="select-room-no-name" id="select-room-no-id">
+                                    </select>
+                                </td>
+                                <td style="width: 10%">
+                                    装修情况
+                                </td>
+                                <td style="width: 24%">
+                                    <select name="select-decorating">
+                                        <option value="0">清水房</option>
+                                        <option value="1">简装房</option>
+                                        <option value="2">精装房</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 10%">
+                                    建筑面积
+                                </td>
+                                <td style="width: 23%">
+                                    <input type="text">
+                                </td>
+                                <td style="width: 10%">
+                                    户型
+                                </td>
+                                <td style="width: 23%">
+                                    <input type="text">
+                                </td>
+                                <td style="width: 10%">
+                                    房屋类型
+                                </td>
+                                <td style="width: 24%">
+                                    <select name="select-house-type">
+                                        <option value="0">洋房</option>
+                                        <option value="1">高层</option>
+                                        <option value="2">商住楼</option>
+                                        <option value="3">别墅</option>
+                                        <option value="4">普通楼房</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                             <tr>
+                                <td style="width: 10%">
+                                    楼盘地址
+                                </td>
+                                <td style="width: 23%">
+                                    <select name="select-area-name" id="select-area-id">
+                                    </select>
+                                    <input type="text">
+                                </td>
+                                <td style="width: 10%">
+                                    购买时间
+                                </td>
+                                <td style="width: 23%">
+                                    <input type="text">
+                                </td>
+                                <td style="width: 10%">
+                                    房产所属人
+                                </td>
+                                <td style="width: 24%">
+                                    <input type="text">
+                                </td>
+                            </tr>
+
+                             <tr>
+                                <td style="width: 10%">
+                                    购买方式
+                                </td>
+                                <td style="width: 23%">
+                                    <select name="select-buy-name">
+                                        <option value="1">全款</option>
+                                        <option value="2">贷款</option>
+                                    </select>
+                                </td>
+                                <td style="width: 10%">
+                                    房屋售价
+                                </td>
+                                <td style="width: 23%">
+                                    <input type="text">万元
+                                </td>
+                                <td style="width: 10%">
+
+                                </td>
+                                <td style="width: 24%">
+
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="submit" value="添加">
+                    </div>
+                    <!--END添加房源信息区域-->
+
+
+			<!--footer-->
+			<div class="row">
+				<div class="col-md-12" style="text-align: center;font-size: 12px;margin-top: 50px;">
+					copyright by ©simba
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>
