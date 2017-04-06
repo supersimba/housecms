@@ -1,5 +1,4 @@
 #coding:utf-8
-
 from django.db import models
 
 
@@ -62,10 +61,10 @@ class Customers(models.Model):
     cid=models.AutoField(primary_key=True)
     customer_name=models.CharField(max_length=15,verbose_name=u'客户名')
     customer_mobile = models.CharField(max_length=11, verbose_name=u'客户手机')
-    intention=models.OneToOneField(Houses,verbose_name=u'意向房产')
-    is_look=models.IntegerField(max_length=1,default=0,verbose_name=u'是否看房')#0 没有看  1 已经看过
+    intention=models.ManyToManyField(Houses,verbose_name=u'意向房产')
+    is_look=models.IntegerField(default=0,verbose_name=u'是否看房')#0 没有看  1 已经看过
     look_time=models.DateTimeField(verbose_name=u'最后看房时间',default=None)
-    is_deal=models.IntegerField(max_length=1,default=0,verbose_name=u'是否成交')#0 没有  1 已经成交
+    is_deal=models.IntegerField(default=0,verbose_name=u'是否成交')#0 没有  1 已经成交
     deal_contract=models.ImageField(max_length=500,verbose_name=u'合同信息')
     class Meta:
         db_table='Customers'
